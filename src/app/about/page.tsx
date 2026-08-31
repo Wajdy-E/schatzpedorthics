@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 
 const credentials = [
   "Doctor of Chiropractic (D.C.)",
-  "Certified Pedorthist (C. Ped.)",
-  "Custom foot orthotics & footwear",
-  "Whole-body biomechanical approach",
+  "Certified Pedorthist (C. Ped. (C))",
+  "Degrees in Biology, Human Biology & Physical and Health Education",
+  "Contemporary acupuncture",
 ];
 
 export default function AboutPage() {
@@ -70,7 +70,7 @@ export default function AboutPage() {
                   <p className="font-display font-semibold text-ink">
                     Dr. Peter Schatz
                   </p>
-                  <p className="text-sm text-brand-700">D.C., C. Ped.</p>
+                  <p className="text-sm text-brand-700">D.C., C. Ped. (C)</p>
                 </div>
               </div>
             </div>
@@ -88,11 +88,32 @@ export default function AboutPage() {
             symptom; he looks at the chain of movement behind it.
           </p>
           <p>
-            As a Certified Pedorthist, he translates that assessment into
-            practical solutions: custom orthotics cast to your feet, the right
-            footwear, compression therapy, and bracing when it&apos;s needed.
-            Every device is built and fitted with the goal of getting you back to
-            the activities you love — comfortably.
+            His clinical approach combines therapeutic modalities, soft-tissue
+            release, stretching, core stabilization, nutritional supplementation,
+            and clinical acupuncture. As a Certified Pedorthist, he translates
+            that assessment into practical solutions: custom orthotics cast to
+            your feet, appropriate footwear, compression therapy, and customized
+            bracing when it&apos;s needed.
+          </p>
+          <p>
+            Before earning his Doctor of Chiropractic degree from the National
+            University of Health Sciences in Chicago, Dr. Schatz earned degrees
+            in Biology, Human Biology, and Physical and Health Education at
+            Queen&apos;s University. He works with professional and amateur athletes
+            and uses Lactate Threshold Testing to build personalized fitness
+            programs for people of all ages and abilities.
+          </p>
+          <p>
+            His combined chiropractic and pedorthic backgrounds inform a unique
+            approach to lower-extremity conditions, with particular interests in
+            golf and basketball. Every device is built and fitted with the goal
+            of getting you back to the activities you love — comfortably.
+          </p>
+          <p>
+            Dr. Schatz is registered with the Acupuncture Council of Ontario,
+            the Canadian and Ontario Chiropractic Associations, the Workplace
+            Safety and Insurance Board, and the United States Chiropractic Board
+            (Certified Parts I-IV).
           </p>
           <p>
             At Schatz Pedorthics, you work directly with Dr. Schatz from your
