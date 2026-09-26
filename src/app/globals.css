@@ -60,3 +60,43 @@ h4,
 .animate-fade-up {
   animation: fade-up 0.6s ease-out both;
 }
+
+.partner-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partner-marquee 28s linear infinite;
+}
+
+.partner-marquee-group {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.partner-marquee:hover .partner-marquee-track,
+.partner-marquee:focus-within .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes partner-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-marquee-track {
+    animation: none;
+  }
+}

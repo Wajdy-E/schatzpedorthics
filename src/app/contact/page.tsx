@@ -39,9 +39,9 @@ const details = [
     hint: "We'll reply within one business day.",
   },
   {
-    label: "Area served",
-    value: site.city,
-    hint: "By appointment.",
+    label: "Burlington clinic",
+    value: `${site.address.street}, ${site.address.locality}, ${site.address.region}`,
+    hint: "Appointments also available in St. Catharines and Niagara by arrangement.",
   },
 ];
 

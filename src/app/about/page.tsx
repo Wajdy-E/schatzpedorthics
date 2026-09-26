@@ -27,6 +27,21 @@ const credentials = [
   "Contemporary acupuncture",
 ];
 
+const brands = [
+  {
+    name: "Atlas Orthotics",
+    href: "https://atlasorthoticlab.com/page/browse",
+    logo: "/atlas.png",
+  },
+  { name: "Sigvaris", href: "https://www.sigvaris.com/", logo: "/sigvaris.svg" },
+  { name: "DonJoy", href: "https://www.donjoystore.com/", logo: "/donjoy.png" },
+  {
+    name: "Bauerfeind",
+    href: "https://www.bauerfeind.ca/",
+    logo: "/bauerfeind.jpg",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -82,18 +97,19 @@ export default function AboutPage() {
         <div className="prose-lg space-y-6 text-lg leading-relaxed text-ink-soft">
           <p>
             Most foot pain doesn&apos;t start — or end — at the foot. Years of
-            clinical experience taught Dr. Schatz that the way you stand and walk
-            ripples all the way up through your knees, hips, and lower back. His
-            chiropractic background means he doesn&apos;t just look at the
-            symptom; he looks at the chain of movement behind it.
+            clinical experience taught Dr. Schatz that many problems in the
+            foot are related to other areas of the body, including the calf,
+            knees, hip, low back, and pelvic areas. His chiropractic background
+            means he doesn&apos;t just look at the symptom; he looks at the complete
+            biomechanical chain to help resolve your issues.
           </p>
           <p>
             His clinical approach combines therapeutic modalities, soft-tissue
             release, stretching, core stabilization, nutritional supplementation,
             and clinical acupuncture. As a Certified Pedorthist, he translates
             that assessment into practical solutions: custom orthotics cast to
-            your feet, appropriate footwear, compression therapy, and customized
-            bracing when it&apos;s needed.
+            your feet, appropriate footwear, compression therapy, customized
+            bracing, and exercise or other therapies when they&apos;re needed.
           </p>
           <p>
             Before earning his Doctor of Chiropractic degree from the National
@@ -105,9 +121,9 @@ export default function AboutPage() {
           </p>
           <p>
             His combined chiropractic and pedorthic backgrounds inform a unique
-            approach to lower-extremity conditions, with particular interests in
-            golf and basketball. Every device is built and fitted with the goal
-            of getting you back to the activities you love — comfortably.
+            approach to lower-extremity conditions. Every device is built and
+            fitted with the goal of getting you back to the activities you love
+            — comfortably.
           </p>
           <p>
             Dr. Schatz is registered with the Acupuncture Council of Ontario,
@@ -120,6 +136,52 @@ export default function AboutPage() {
             first assessment through to fitting and follow-up. No rushed
             appointments, no one-size-fits-all — just careful, personal care.
           </p>
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-sand-deep bg-sand p-8">
+          <h2 className="text-xl font-semibold text-ink">
+            Products and laboratory partners
+          </h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-ink-soft">
+            Dr. Schatz works with trusted suppliers and manufacturers to source
+            orthotics, compression garments, footwear, and bracing suited to
+            each patient&apos;s needs.
+          </p>
+          <div className="partner-marquee mt-6" aria-label="Partner brands">
+            <div className="partner-marquee-track">
+              {[0, 1].map((copyIndex) => (
+                <div
+                  key={copyIndex}
+                  className="partner-marquee-group"
+                  aria-hidden={copyIndex === 1}
+                >
+                  {brands.map((brand) => (
+                    <a
+                      key={`${brand.name}-${copyIndex}`}
+                      href={brand.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-52 shrink-0 rounded-xl border border-sand-deep bg-sand/40 p-4 text-brand-700 transition-colors hover:border-brand-300 hover:bg-brand-50 sm:w-60"
+                    >
+                      <div className="relative flex h-16 items-center justify-center rounded-lg border border-sand-deep bg-white/70">
+                        <Image
+                          src={brand.logo}
+                          alt={`${brand.name} logo`}
+                          fill
+                          sizes="240px"
+                          className="object-contain p-3"
+                        />
+                      </div>
+                      <div className="mt-3 flex items-center justify-between gap-3 font-semibold">
+                        <span>{brand.name}</span>
+                        <span aria-hidden="true">↗</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 rounded-3xl border border-sand-deep bg-sand p-8">

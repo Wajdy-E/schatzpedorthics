@@ -76,7 +76,10 @@ export function Footer() {
                 {site.email}
               </a>
             </li>
-            <li className="text-white/70">{site.city}</li>
+            <li className="text-white/70">
+              {site.address.street}, {site.address.locality}, {site.address.region}
+            </li>
+            <li className="text-white/70">{site.city.split(" · ")[1]}</li>
           </ul>
         </div>
       </div>
